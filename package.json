@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1"
+  },
+  "scripts": {
+    "start": "parcel serve --host 0.0.0.0 ./src/index.html ./src/page.html ./src/post.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "name": "blog-theme",
+  "version": "0.1.0",
+  "description": "My blog theme",
+  "main": "index.html",
+  "author": "Santiago Fraire <santiwilly@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "tailwindcss": "^1.4.6"
+  }
+}
