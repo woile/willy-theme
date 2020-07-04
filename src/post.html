@@ -1,15 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>My Parcel Project</title>
+    <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <title>Document</title>
     <link href="./index.css" rel="stylesheet" />
   </head>
   <body>
-    asdasd
+    <div class="layout">
+      <div class="cover"></div>
+      <input id="cool-menu" type="checkbox" />
+      <label for="cool-menu" class="cool-menu__label">
+        <svg
+          class="cool-menu hover:cool-menu checked:cool-menu"
+          viewBox="0 0 100 80"
+          width="40"
+          height="40"
+          aria-hidden="true"
+        >
+          <rect x="30" width="40" height="11"></rect>
+          <rect y="30" x="15" width="70" height="13"></rect>
+          <rect y="60" width="100" height="15"></rect>
+        </svg>
+      </label>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="/" class="hover:menu__link">Home</a>
+          </li>
+          <li><a href="/" class="hover:menu__link">Tags</a></li>
+          <li><a href="/" class="hover:menu__link">Archive</a></li>
+        </ul>
+      </div>
+
+      <div class="posts">
+        <article class="article">
+          <header>
+            <h2 class="posts__title">
+              <a href="post.html" class="hover:posts__title__link">
+                Multiple configurations in kubernetes
+              </a>
+            </h2>
+          </header>
+          <section class="post__meta">
+            Woile on
+            <a href="#pepe" class="post__footer__link hover:post__footer__link"
+              >#configuration</a
+            >, #kubectl, #kubernetes, #linux, 2019-11-08 15:15
+          </section>
+
+          <section class="post">
+            <div>
+              <p>
+                It may happen to you, that you start working with 2 or more
+                different clusters in kubernetes. At this point, you'll want to
+                have multiple config files, instead of replacing
+                <code>~/.kube/config</code>, which is fine the first few times.
+              </p>
+              <p>
+                In order to do this we only need to set
+                <code>KUBECONFIG</code> env variable with the path to the
+                kubeconfigs.
+              </p>
+              <p>
+                Create a <code>configs</code> folder, where the kubernetes
+                config files will live.
+              </p>
+              <pre
+                class="code literal-block"
+              ><span></span>mkdir -p ~/.kube/configs
+</pre>
+
+              <p>
+                The next thing is to add the env variable to our
+                <code>.bashrc</code>, <code>.zshrc</code> or
+                <code>.profile</code> file, with the location of our
+                configurations. The paths should be separated by a
+                <code>:</code>.
+              </p>
+              <pre
+                class="code literal-block"
+              ><span></span><span class="nb">export</span> <span class="nv">KUBECONFIG</span><span class="o">=</span><span class="nv">$HOME</span>/.kube/configs/gke-config:<span class="nv">$HOME</span>/.kube/configs/eks-config
+</pre>
+
+              <p>
+                Reloading our terminal with <code>. ~/.bashrc</code>, or opening
+                a new one should pick up the changes.
+              </p>
+              <h4>Automating the config detection</h4>
+              <p>
+                Why not automate this? So everytime we add a new kubeconfig,
+                it's detected automatically.
+              </p>
+              <p>
+                Here's my attempt, place this snippet in your
+                <code>.bashrc</code> or any other terminal file.
+              </p>
+              <pre
+                class="code literal-block"
+              ><span></span>set_kubeconfig<span class="o">()</span> <span class="o">{</span>
+    <span class="k">for</span> entry in <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.kube/configs"</span>/*
+    <span class="k">do</span>
+        <span class="c1"># Get files which do not include "skip"</span>
+        <span class="k">if</span> <span class="o">[</span> -f <span class="s2">"</span><span class="nv">$entry</span><span class="s2">"</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">[[</span> <span class="nv">$entry</span> !<span class="o">=</span> *<span class="s2">"skip"</span>* <span class="o">]]</span><span class="p">;</span><span class="k">then</span>
+            <span class="nv">kubeconfigs</span><span class="o">=</span><span class="s2">"</span><span class="nv">$kubeconfigs</span><span class="s2">:</span><span class="nv">$entry</span><span class="s2">"</span>
+        <span class="k">fi</span>
+    <span class="k">done</span>
+
+    <span class="c1"># Clean first colons</span>
+    <span class="nv">kubeconfigs</span><span class="o">=</span><span class="si">${</span><span class="nv">kubeconfigs</span><span class="p">#</span><span class="s2">":"</span><span class="si">}</span>
+    <span class="nb">export</span> <span class="nv">KUBECONFIG</span><span class="o">=</span><span class="nv">$kubeconfigs</span>
+<span class="o">}</span>
+
+<span class="c1"># Execute the function</span>
+set_kubeconfig
+</pre>
+
+              <p>
+                This script will get all the <strong>files</strong> inside
+                <code>~/.kube/configs</code>, which do not include
+                <code>skip</code> in their name, and will set the
+                <code>KUBECONFIG</code> variable to the found files.
+              </p>
+              <h4>Switching context and namespace</h4>
+              <p>
+                Now that our configs are detected automatically, we still have
+                to change manually between contexts and namespaces. I'll leave
+                here the shortcuts
+              </p>
+              <p>
+                Remember that a context is a mix of [cluster, namespace, user].
+              </p>
+              <h5>Current configuration</h5>
+              <pre
+                class="code literal-block"
+              ><span></span>kubectl config view --minify  <span class="c1"># without minify we'll see all the configs</span>
+</pre>
+
+              <h5>List contexts</h5>
+              <pre
+                class="code literal-block"
+              ><span></span>kubectl config get-contexts
+</pre>
+
+              <h5>Swtich context</h5>
+              <pre
+                class="code literal-block"
+              ><span></span>kubectl config use-context &lt;context_name&gt;
+</pre>
+
+              <h5>Switch namespace</h5>
+              <pre
+                class="code literal-block"
+              ><span></span>kubectl config set-context --current --namespace<span class="o">=</span>&lt;new_namespace&gt;
+</pre>
+
+              <p>
+                Find me on twitter:
+                <a href="https://twitter.com/santiwilly">@santiwilly</a>
+              </p>
+              <p>Thanks for reading!</p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </div>
   </body>
 </html>

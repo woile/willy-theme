@@ -3,23 +3,47 @@
 @tailwind components;
 
 .layout {
-  @apply leading-normal flex flex-wrap w-full max-w-screen-xl mx-auto font-mono antialiased bg-white h-screen;
+  @apply leading-normal flex flex-wrap w-full max-w-screen-xl mx-auto font-mono antialiased bg-white min-h-screen;
 }
 
 .cover {
   @apply w-full top-0 text-center mb-12;
 }
 
+h1 {
+  @apply text-6xl mb-3 font-semibold;
+}
+
+h2 {
+  @apply text-4xl mb-3 font-semibold;
+}
+
+h3 {
+  @apply text-3xl mb-3 font-semibold;
+}
+
+h4 {
+  @apply text-2xl mb-3 font-semibold;
+}
+
+h5 {
+  @apply text-xl mb-3 font-semibold;
+}
+
+h6 {
+  @apply text-lg mb-3 font-semibold;
+}
+
 .cover__title {
-  @apply text-6xl mt-6 font-serif;
+  @apply text-6xl mt-6;
 }
 
 .menu {
-  @apply w-1/4 border-r border-gray-200 px-8 text-right hidden;
+  @apply fixed bg-white h-full text-center w-full hidden pt-4 invisible opacity-0;
 }
 
 .menu ul li {
-  @apply mb-3;
+  @apply mb-4;
 }
 
 .menu__link {
@@ -35,11 +59,22 @@
 }
 
 .posts__title {
-  @apply text-xl tracking-wide;
+  @apply tracking-wide mb-3;
 }
 
-.posts__footer {
-  @apply text-gray-500;
+.post__meta {
+  @apply text-gray-600;
+}
+
+.post {
+  @apply py-8 break-words;
+}
+
+.post pre{
+  @apply overflow-x-scroll mb-8;
+}
+.post p {
+  @apply mb-8;
 }
 
 .pagination {
@@ -48,7 +83,7 @@
 
 @variants hover {
   .menu__link {
-    @apply text-teal-500;
+    @apply text-teal-500 font-semibold;
   }
 
   .posts__title__link {
@@ -56,27 +91,55 @@
   }
 
   .post__footer__link {
-    @apply text-gray-800;
+    @apply text-teal-500;
   }
 
   .pagination__link {
-    @apply text-teal-500;
+    @apply text-teal-500 font-semibold;
   }
+  /* .cool-menu {
+    @apply text-teal-500;
+  } */
+}
+
+#cool-menu {
+  @apply absolute transform scale-0 ;
+}
+
+#cool-menu + label > svg {
+  @apply transition ease-in-out duration-500;
+}
+
+#cool-menu:checked + label > svg {
+  @apply text-teal-500 transform rotate-180 transition ease-in-out duration-500;
+}
+
+#cool-menu:checked ~ .menu {
+  @apply flex justify-center items-center visible opacity-100;
+}
+
+.cool-menu {
+  @apply fill-current text-black;
+}
+
+.cool-menu__label {
+  @apply left-1/2 fixed transform -translate-x-1/2  bottom-0 z-50;
 }
 
 .post__footer__link {
-  @apply text-gray-600;
+  @apply text-gray-700 font-semibold;
 }
 
 @screen lg {
   .menu {
-    @apply block;
+    @apply w-1/4 border-r border-gray-200 border-b-0 px-8 text-right block relative visible opacity-100;
   }
   .posts {
-    @apply w-3/4;
+    @apply w-3/5;
   }
-  .posts__title {
-    @apply text-2xl;
+
+  .cool-menu {
+    @apply hidden;
   }
 }
 
