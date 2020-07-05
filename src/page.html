@@ -10,6 +10,205 @@
     <link href="./index.css" rel="stylesheet" />
   </head>
   <body>
+    <div class="layout">
+      <div class="cover"></div>
+      <input id="cool-menu" type="checkbox" />
+      <label for="cool-menu" class="cool-menu__label">
+        <svg
+          class="cool-menu hover:cool-menu checked:cool-menu"
+          viewBox="0 0 100 80"
+          width="40"
+          height="40"
+          aria-hidden="true"
+        >
+          <rect x="30" width="40" height="11"></rect>
+          <rect y="30" x="15" width="70" height="13"></rect>
+          <rect y="60" width="100" height="15"></rect>
+        </svg>
+      </label>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="/" class="hover:menu__link">Home</a>
+          </li>
+          <li><a href="/post.html" class="hover:menu__link">Tags</a></li>
+          <li><a href="/page.html" class="hover:menu__link">Archive</a></li>
+        </ul>
+      </div>
 
+      <div class="content">
+        <article>
+          <header>
+            <h2 class="header__title">
+              <a href="post.html" class="hover:header__title__link">
+                Multiple configurations in kubernetes
+              </a>
+            </h2>
+          </header>
+          <section>
+            <h1>Heading level 1</h1>
+
+            <p>
+              It <strong>may happen to you</strong>, that you start working with
+              2 or more different clusters in kubernetes. At this point, you'll
+              want to have multiple config files, instead of replacing
+              <code>~/.kube/config</code>, which is fine the first few times.
+            </p>
+
+            <h2>Heading level 2</h2>
+
+            <p>
+              The next thing is to add the env variable to our
+              <code>.bashrc</code>, <code>.zshrc</code> or
+              <code>.profile</code> file, with the location of our
+              configurations. The paths should be separated by a <code>:</code>.
+            </p>
+
+            <h3>Heading level 3</h3>
+
+            <p>
+              Why not automate this? So everytime we add a new kubeconfig, it's
+              detected automatically.
+            </p>
+
+            <h4>Heading level 4</h4>
+
+            <p>
+              Now that our <i>configs are</i> detected automatically, we still
+              have to change manually between contexts and namespaces. I'll
+              leave here the shortcuts
+            </p>
+
+            <h5>Heading level 5</h5>
+
+            <p>
+              Now that our <mark>configs are detected</mark> automatically, we
+              still have to change manually between contexts and namespaces.
+              I'll leave here the shortcuts
+            </p>
+
+            <h6>Heading level 6</h6>
+
+            <p>I really like using Markdown.</p>
+
+            <p>
+              I think I'll use it to format all of my documents from now on.
+            </p>
+
+            <p>
+              Now that our configs are detected automatically, we still have to
+              change manually between contexts and namespaces. I'll leave here
+              the shortcuts
+            </p>
+            <pre
+              class="code literal-block"
+            ><span></span>kubectl config view --minify  <span class="c1"># without minify we'll see all the configs</span>
+</pre>
+
+            <p>
+              This is the first line.<br />
+              And this is the second line. Italicized text is the
+              <em>cat's meow</em>.
+            </p>
+            <ol>
+              <li>First item</li>
+              <li>Second item</li>
+              <li>
+                Third item
+                <ol>
+                  <li>Indented item</li>
+                  <li>Indented item</li>
+                </ol>
+              </li>
+              <li>Fourth item</li>
+            </ol>
+            <hr />
+            <ul>
+              <li>First item</li>
+              <li>Second item</li>
+              <li>
+                Third item
+                <ul>
+                  <li>Indented item</li>
+                  <li>Indented item</li>
+                </ul>
+              </li>
+              <li>Fourth item</li>
+            </ul>
+            <p>
+              My favorite search engine is
+              <a href="https://duckduckgo.com">Duck Duck Go</a>.
+            </p>
+            <blockquote>
+              <p>Note</p>
+              <p>
+                This info is no longer relevant. Right now Skype has been
+                rewritten using
+                <a class="reference external" href="https://electron.atom.io/"
+                  >electron</a
+                >
+                and installing it in a debian based system is no longer a
+                problem. Right now it doesn't support screensharing and some
+                other features a normal person would expect.
+              </p>
+            </blockquote>
+
+            <h6>Big Image fits</h6>
+
+            <img src="https://picsum.photos/1280/768" alt="image" />
+
+            <h6>Small image looks</h6>
+            <img src="https://picsum.photos/300/100" alt="image" />
+
+            <h6>Table</h6>
+            <table>
+              <thead>
+                <tr>
+                  <th>Python</th>
+                  <th>Rust</th>
+                  <th>Docs</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>num: int = 1</code></td>
+                  <td>
+                    <code>let num: i32 = 1; // used as default integer</code>
+                  </td>
+                  <td>
+                    <a
+                      href="https://doc.rust-lang.org/book/ch03-02-data-types.html#integer-types"
+                      >integers</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>word: str = "avocado"</code></td>
+                  <td>
+                    <code>let word: String = String::from("avocado");</code>
+                  </td>
+                  <td>
+                    <a
+                      href="https://doc.rust-lang.org/book/ch08-02-strings.html"
+                      >strings</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>point: Tuple = (1, 2) point: Tuple = (1, 2) point: Tuple = (1, 2) point: Tuple = (1, 2) point: Tuple = (1, 2) point: Tuple = (1, 2) point: Tuple = (1, 2) point: Tuple = (1, 2) point: Tuple = (1, 2) point: Tuple = (1, 2)</td>
+                  <td><code>let point: (i32, i32) = (1, 2)</code></td>
+                  <td>
+                    <a
+                      href="https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type"
+                      >tuples</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </article>
+      </div>
+    </div>
   </body>
 </html>

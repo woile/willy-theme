@@ -1,0 +1,127 @@
+article {
+  @apply mb-8;
+}
+
+article .header__title {
+  @apply tracking-wide mb-3;
+}
+
+article .article__meta {
+  @apply text-gray-600 mt-4;
+}
+
+article h1 {
+  @apply text-5xl mt-12 font-semibold;
+}
+
+article h2 {
+  @apply text-3xl mt-10 font-semibold;
+}
+
+article h3 {
+  @apply text-2xl mt-8 font-semibold;
+}
+
+article h4 {
+  @apply text-xl mt-8 font-semibold;
+}
+
+article h5 {
+  @apply text-lg mt-8 font-semibold;
+}
+
+article h6 {
+  @apply text-base mt-8 font-semibold;
+}
+
+article section > p:first-of-type {
+  @apply mt-4;
+}
+
+section {
+  @apply break-words;
+}
+
+section pre {
+  @apply overflow-x-auto mb-8;
+}
+
+section p {
+  @apply mt-4;
+}
+
+section p + p,
+section pre {
+  @apply mt-8;
+}
+
+section code {
+  @apply pb-px pt-1 px-1 bg-teal-500 rounded mb-px;
+}
+
+section a {
+  @apply text-blue-600 ;
+}
+
+section a:visited {
+  @apply text-purple-700;
+}
+
+section a:hover {
+  @apply text-blue-800;
+}
+
+
+@variants hover {
+  article .header__title__link {
+    @apply bg-teal-400 p-1;
+  }
+
+  article .article__meta__link {
+    @apply text-teal-500;
+  }
+}
+
+article .article__meta__link {
+  @apply text-gray-700 font-semibold;
+}
+
+mark {
+  @apply pb-px pt-1 px-1;
+}
+
+article ol li {
+  @apply ml-8 mt-4 list-decimal list-inside;
+}
+
+article ul li {
+  @apply ml-8 mt-4 list-disc list-inside;
+}
+
+article hr {
+  @apply mt-4;
+}
+
+article blockquote {
+  @apply mt-4 bg-gray-300 px-5 pt-px pb-3 border-l-8 border-gray-600 text-gray-800;
+}
+
+article img {
+  @apply mt-4;
+}
+
+article table {
+  @apply mt-4 table-auto text-sm overflow-x-auto;
+}
+
+article table thead {
+  @apply bg-gray-800 text-white;
+}
+article table th {
+  @apply text-base font-semibold;
+}
+article table th,
+article table td {
+  @apply border-b border-gray-400 py-3 px-4 text-left;
+}
+

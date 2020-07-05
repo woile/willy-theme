@@ -1,0 +1,78 @@
+.layout {
+  @apply leading-normal flex flex-wrap w-full max-w-screen-xl mx-auto font-mono antialiased bg-white min-h-screen;
+}
+
+.cover {
+  @apply w-full top-0 text-center mb-12;
+}
+
+.cover__title {
+  @apply text-6xl mt-6;
+}
+
+.menu {
+  @apply fixed bg-white h-full text-center w-full hidden pt-4 invisible opacity-0;
+}
+
+.menu ul li {
+  @apply mb-4;
+}
+
+.menu__link {
+  @apply border-gray-200;
+}
+
+.content {
+  @apply w-full px-8;
+}
+
+.pagination {
+  @apply flex justify-between my-8;
+}
+
+@variants hover {
+  .menu__link {
+    @apply text-blue-600;
+  }
+
+  .pagination__link {
+    @apply text-blue-600;
+  }
+}
+
+#cool-menu {
+  @apply absolute transform scale-0;
+}
+
+#cool-menu + label > svg {
+  @apply transition ease-in-out duration-500;
+}
+
+#cool-menu:checked + label > svg {
+  @apply text-teal-500 transform rotate-180 transition ease-in-out duration-500;
+}
+
+#cool-menu:checked ~ .menu {
+  @apply flex justify-center items-center visible opacity-100;
+}
+
+.cool-menu {
+  @apply fill-current text-black;
+}
+
+.cool-menu__label {
+  @apply left-1/2 fixed transform -translate-x-1/2  bottom-0 z-50;
+}
+
+@screen lg {
+  .menu {
+    @apply w-1/4 border-r border-gray-200 border-b-0 px-8 text-right block relative visible opacity-100;
+  }
+  .content {
+    @apply w-3/5;
+  }
+
+  .cool-menu {
+    @apply hidden;
+  }
+}

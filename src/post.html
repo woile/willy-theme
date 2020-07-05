@@ -8,8 +8,10 @@
     />
     <title>Document</title>
     <link href="./index.css" rel="stylesheet" />
+
   </head>
   <body>
+
     <div class="layout">
       <div class="cover"></div>
       <input id="cool-menu" type="checkbox" />
@@ -31,29 +33,30 @@
           <li>
             <a href="/" class="hover:menu__link">Home</a>
           </li>
-          <li><a href="/" class="hover:menu__link">Tags</a></li>
-          <li><a href="/" class="hover:menu__link">Archive</a></li>
+          <li><a href="/post.html" class="hover:menu__link">Tags</a></li>
+          <li><a href="/page.html" class="hover:menu__link">Archive</a></li>
         </ul>
       </div>
 
-      <div class="posts">
-        <article class="article">
+      <div class="content">
+        <article>
           <header>
-            <h2 class="posts__title">
-              <a href="post.html" class="hover:posts__title__link">
+            <h2 class="header__title">
+              <a href="post.html" class="hover:header__title__link">
                 Multiple configurations in kubernetes
               </a>
             </h2>
           </header>
-          <section class="post__meta">
+          <section class="article__meta">
             Woile on
-            <a href="#pepe" class="post__footer__link hover:post__footer__link"
-              >#configuration</a
+            <a href="#pepe" class="article__meta__link hover:article__meta__link">
+              #configuration
+            </a
             >, #kubectl, #kubernetes, #linux, 2019-11-08 15:15
           </section>
 
-          <section class="post">
-            <div>
+          <section>
+
               <p>
                 It may happen to you, that you start working with 2 or more
                 different clusters in kubernetes. At this point, you'll want to
@@ -163,7 +166,6 @@ set_kubeconfig
                 <a href="https://twitter.com/santiwilly">@santiwilly</a>
               </p>
               <p>Thanks for reading!</p>
-            </div>
           </section>
         </article>
       </div>
