@@ -1,3 +1,4 @@
+
 .layout {
   @apply leading-normal flex flex-wrap w-full max-w-screen-xl mx-auto font-mono antialiased bg-white min-h-screen;
 }
@@ -16,6 +17,10 @@
 
 .menu ul li {
   @apply mb-4;
+}
+
+.menu ul li.active {
+  @apply text-teal-500;
 }
 
 .menu__link {

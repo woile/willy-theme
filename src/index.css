@@ -1,9 +1,33 @@
 @tailwind base;
 
-@tailwind components;
+h1 {
+  @apply text-5xl mt-12 font-semibold;
+}
+
+h2 {
+  @apply text-3xl mt-10 font-semibold;
+}
+
+h3 {
+  @apply text-2xl mt-8 font-semibold;
+}
+
+h4 {
+  @apply text-xl mt-8 font-semibold;
+}
+
+h5 {
+  @apply text-lg mt-8 font-semibold;
+}
+
+h6 {
+  @apply text-base mt-8 font-semibold;
+}
 
 @import './layout.css';
 
 @import './article.css';
+
+@tailwind components;
 
 @tailwind utilities;

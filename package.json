@@ -4,12 +4,12 @@
   },
   "scripts": {
     "start": "parcel serve --host 0.0.0.0 ./src/**/*.html",
-    "build": "parcel build ./src/index.html"
+    "build": "parcel build ./src/index.css --public-url ./ --dist-dir css",
+    "clean": "rm -rf .parcel-cache/ build/ dist/ css/"
   },
   "name": "blog-theme",
   "version": "0.1.0",
   "description": "My blog theme",
-  "main": "index.html",
   "author": "Santiago Fraire <santiwilly@gmail.com>",
   "license": "MIT",
   "private": false,
