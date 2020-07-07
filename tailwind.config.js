@@ -8,8 +8,13 @@ module.exports = {
       inset: {
         "1/2": "50%",
       },
-      "translate": {
+      translate: {
         "-1/2": "-50%",
+      },
+      colors: {
+        "primary-color": "var(--primary-color)",
+        "default-color": "var(--default-color)",
+        "inverse-color": "var(--inverse-color)",
       },
     },
   },

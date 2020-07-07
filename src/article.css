@@ -51,7 +51,7 @@ section a:hover {
 
 @variants hover {
   article .header__title__link {
-    @apply bg-teal-400 p-1;
+    @apply bg-teal-400 p-1 text-white;
   }
 
   article .article__meta__link {
