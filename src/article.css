@@ -94,7 +94,7 @@ article img {
 }
 
 article table {
-  @apply mt-4 table-auto text-sm overflow-x-auto;
+  @apply mt-4 table-auto text-sm overflow-x-auto text-left w-full;
 }
 
 article table thead {

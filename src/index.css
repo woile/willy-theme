@@ -1,19 +1,32 @@
 @tailwind base;
 
 h1 {
-  @apply text-5xl mt-12 font-semibold;
+  @apply text-5xl font-semibold;
+}
+
+h1:not(:first-child) {
+  @apply mt-12;
 }
 
 h2 {
-  @apply text-3xl mt-10 font-semibold;
+  @apply text-3xl font-semibold;
+}
+
+h2:not(:first-child) {
+  @apply mt-10;
 }
 
 h3 {
-  @apply text-2xl mt-8 font-semibold;
+  @apply text-2xl font-semibold;
+}
+
+h4:not(:first-child),
+h3:not(:first-child) {
+  @apply mt-8;
 }
 
 h4 {
-  @apply text-xl mt-8 font-semibold;
+  @apply text-xl font-semibold;
 }
 
 h5 {
