@@ -85,11 +85,11 @@ label[for=dark-mode]::before {
 }
 
 .cool-menu {
-  @apply fill-current text-black;
+  @apply fill-current text-default-color;
 }
 
 .cool-menu__label {
-  @apply left-1/2 fixed transform -translate-x-1/2  bottom-0 z-50;
+  @apply left-1/2 fixed transform -translate-x-1/2  bottom-0 z-50 mb-2;
 }
 
 @screen lg {

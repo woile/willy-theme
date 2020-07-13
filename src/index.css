@@ -24,9 +24,14 @@ h6 {
   @apply text-base mt-8 font-semibold;
 }
 
+
 @import './layout.css';
 
 @import './article.css';
+
+.thread__container {
+  @apply text-default-color;
+}
 
 @tailwind components;
 

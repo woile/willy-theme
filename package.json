@@ -1,8 +1,10 @@
 {
   "scripts": {
     "start": "parcel serve --host 0.0.0.0 ./src/**/*.html",
-    "build": "parcel build ./src/index.css --public-url ./ --dist-dir css",
-    "clean": "rm -rf .parcel-cache/ build/ dist/ css/"
+    "build": "yarn build-css && yarn build-js",
+    "build-css": "parcel build ./src/index.css --public-url ./ --dist-dir assets/css",
+    "build-js": "parcel build ./src/index.js --public-url ./ --dist-dir assets/js",
+    "clean": "rm -rf .parcel-cache/ build/ dist/ assets/"
   },
   "name": "blog-theme",
   "version": "0.1.0",
