@@ -75,6 +75,11 @@ article ul li {
   @apply ml-8 mt-4 list-disc list-inside;
 }
 
+article ul li p {
+  @apply inline;
+}
+
+
 article hr {
   @apply mt-4;
 }
