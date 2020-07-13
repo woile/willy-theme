@@ -33,7 +33,7 @@ section pre {
 }
 
 section code {
-  @apply pb-px pt-1 px-1 bg-gray-300 text-black rounded mb-px;
+  @apply p-1 bg-gray-300 text-black rounded mb-px;
 }
 
 section a {
