@@ -93,8 +93,12 @@ article img {
   @apply mt-4;
 }
 
+/* display: block;
+width: 100%;
+overflow: auto; */
+
 article table {
-  @apply mt-4 table-auto text-sm overflow-x-auto text-left w-full;
+  @apply block mt-4 table-auto text-sm overflow-x-auto text-left w-full;
 }
 
 article table thead {
