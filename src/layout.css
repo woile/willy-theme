@@ -26,11 +26,11 @@
 }
 
 .cover {
-  @apply w-full top-0 text-center mb-12;
+  @apply w-full top-0 text-center mb-12 z-10;
 }
 
 .cover__title {
-  @apply text-6xl mt-6;
+  @apply text-4xl mt-6;
 }
 
 .menu {
