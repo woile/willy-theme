@@ -78,7 +78,7 @@
 
 #dark-mode,
 #cool-menu {
-  @apply absolute transform scale-0 ;
+  @apply fixed transform scale-0 ;
 }
 
 #cool-menu + label > svg {

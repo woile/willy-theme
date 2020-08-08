@@ -1,8 +1,8 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  purge: ["./src/**/*.html", "./src/**/*.css", "./src/**/*.js"],
-  // purge: [],
+  // purge: ["./src/**/*.html", "./src/**/*.css", "./src/**/*.js"],
+  purge: [],
   theme: {
     extend: {
       inset: {
