@@ -13,9 +13,9 @@
 }
 
 
-label[for=dark-mode]::before {
+/* label[for=dark-mode]::before {
   content: "🌚";
-}
+} */
 
 .theme {
   @apply bg-inverse-color text-default-color;
@@ -57,6 +57,8 @@ label[for=dark-mode]::before {
   @apply flex justify-between my-8;
 }
 
+
+
 @variants hover {
   .menu__link {
     @apply text-blue-600;
@@ -65,11 +67,18 @@ label[for=dark-mode]::before {
   .pagination__link {
     @apply text-blue-600;
   }
+  .dark-mode-label {
+    @apply text-teal-500;
+  }
+}
+
+.dark-mode-label {
+  @apply align-bottom inline-block cursor-pointer fill-current text-gray-600
 }
 
 #dark-mode,
 #cool-menu {
-  @apply absolute transform scale-0;
+  @apply absolute transform scale-0 ;
 }
 
 #cool-menu + label > svg {
@@ -89,7 +98,7 @@ label[for=dark-mode]::before {
 }
 
 .cool-menu__label {
-  @apply left-1/2 fixed transform -translate-x-1/2  bottom-0 z-50 mb-2;
+  @apply left-1/2 fixed transform -translate-x-1/2  bottom-0 z-50 mb-4;
 }
 
 @screen lg {

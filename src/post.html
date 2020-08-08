@@ -8,58 +8,84 @@
     />
     <title>Document</title>
     <link href="./index.css" rel="stylesheet" />
-
   </head>
   <body>
     <input id="dark-mode" type="checkbox" />
     <div class="theme">
+      <div class="layout">
+        <div class="cover"></div>
+        <input id="cool-menu" type="checkbox" />
+        <label for="cool-menu" class="cool-menu__label">
+          <svg
+            class="cool-menu hover:cool-menu checked:cool-menu"
+            viewBox="0 0 100 80"
+            width="40"
+            height="40"
+            aria-hidden="true"
+          >
+            <rect x="30" width="40" height="11"></rect>
+            <rect y="30" x="15" width="70" height="13"></rect>
+            <rect y="60" width="100" height="15"></rect>
+          </svg>
+        </label>
+        <div class="menu">
+          <ul>
+            <li>
+              <label
+                class="dark-mode-label hover:dark-mode-label"
+                for="dark-mode"
+              >
+                <?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Generator: Gravit.io --><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  style="isolation: isolate;"
+                  viewBox="0 0 416 416"
+                  width="30px"
+                  height="30px"
+                >
+                  <defs>
+                    <clipPath id="_clipPath_qEPwrMg7OPn6mDBNPkG6Nqc7qffgU4IC">
+                      <rect width="416" height="416" />
+                    </clipPath>
+                  </defs>
+                  <g
+                    clip-path="url(#_clipPath_qEPwrMg7OPn6mDBNPkG6Nqc7qffgU4IC)"
+                  >
+                    <path
+                      d=" M 304 88 C 304 57.38 299.49 26.39 288 0 C 364.43 33.27 416 111.32 416 200 C 416 319.29 319.29 416 200 416 C 111.32 416 33.27 364.43 0 288 C 26.39 299.49 57.38 304 88 304 C 207.29 304 304 207.29 304 88 Z "
+                    />
+                  </g>
+                </svg>
+              </label>
+            </li>
+            <li>
+              <a href="/" class="hover:menu__link">Home</a>
+            </li>
+            <li><a href="/post.html" class="hover:menu__link">Tags</a></li>
+            <li><a href="/page.html" class="hover:menu__link">Archive</a></li>
+          </ul>
+        </div>
 
-    <div class="layout">
-      <div class="cover"></div>
-      <input id="cool-menu" type="checkbox" />
-      <label for="cool-menu" class="cool-menu__label">
-        <svg
-          class="cool-menu hover:cool-menu checked:cool-menu"
-          viewBox="0 0 100 80"
-          width="40"
-          height="40"
-          aria-hidden="true"
-        >
-          <rect x="30" width="40" height="11"></rect>
-          <rect y="30" x="15" width="70" height="13"></rect>
-          <rect y="60" width="100" height="15"></rect>
-        </svg>
-      </label>
-      <div class="menu">
-        <ul>
-          <li><label class="dark-mode-label" for="dark-mode"></label></li>
-          <li>
-            <a href="/" class="hover:menu__link">Home</a>
-          </li>
-          <li><a href="/post.html" class="hover:menu__link">Tags</a></li>
-          <li><a href="/page.html" class="hover:menu__link">Archive</a></li>
-        </ul>
-      </div>
+        <div class="content">
+          <article>
+            <header>
+              <h2 class="header__title">
+                <a href="post.html" class="hover:header__title__link">
+                  Multiple configurations in kubernetes
+                </a>
+              </h2>
+            </header>
+            <section class="article__meta">
+              Woile on
+              <a
+                href="#pepe"
+                class="article__meta__link hover:article__meta__link"
+              >
+                #configuration </a
+              >, #kubectl, #kubernetes, #linux, 2019-11-08 15:15
+            </section>
 
-      <div class="content">
-        <article>
-          <header>
-            <h2 class="header__title">
-              <a href="post.html" class="hover:header__title__link">
-                Multiple configurations in kubernetes
-              </a>
-            </h2>
-          </header>
-          <section class="article__meta">
-            Woile on
-            <a href="#pepe" class="article__meta__link hover:article__meta__link">
-              #configuration
-            </a
-            >, #kubectl, #kubernetes, #linux, 2019-11-08 15:15
-          </section>
-
-          <section>
-
+            <section>
               <p>
                 It may happen to you, that you start working with 2 or more
                 different clusters in kubernetes. At this point, you'll want to
@@ -169,10 +195,10 @@ set_kubeconfig
                 <a href="https://twitter.com/santiwilly">@santiwilly</a>
               </p>
               <p>Thanks for reading!</p>
-          </section>
-        </article>
+            </section>
+          </article>
+        </div>
       </div>
-    </div>
     </div>
   </body>
 </html>
