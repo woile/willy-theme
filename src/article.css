@@ -60,7 +60,7 @@ section a:hover {
 }
 
 article .article__meta__link {
-  @apply text-indigo-600 font-semibold;
+  @apply text-indigo-600 font-bold;
 }
 
 mark {
