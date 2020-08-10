@@ -54,11 +54,11 @@
 }
 
 .pagination {
-  @apply flex justify-between my-8;
+  @apply flex justify-between my-8 flex-wrap;
 }
 
 .tags {
-  @apply flex justify-start;
+  @apply flex justify-start flex-wrap;
 }
 
 .tags li,
