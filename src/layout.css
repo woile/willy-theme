@@ -2,14 +2,16 @@
   --primary-color: theme("colors.teal.500");
   /* --secondary-color: theme("colors.white"); */
   --default-color: theme("colors.black");
-  --inverse-color: theme("colors.white")
+  --inverse-color: theme("colors.white");
+  --menu-background: theme("colors.yellow.100");
 }
 
 #dark-mode:checked ~ .theme {
   --primary-color: theme("colors.teal.500");
   /* --secondary-color: theme("colors.white"); */
   --default-color: theme("colors.gray.300");
-  --inverse-color: theme("colors.black")
+  --inverse-color: theme("colors.black");
+  --menu-background: theme("colors.yellow.700");
 }
 
 
@@ -22,19 +24,19 @@
 }
 
 .layout {
-  @apply leading-normal flex flex-wrap w-full max-w-screen-xl mx-auto font-mono antialiased min-h-screen;
+  @apply justify-center leading-normal flex flex-wrap w-full max-w-screen-xl mx-auto font-mono antialiased min-h-screen;
 }
 
 .cover {
-  @apply w-full top-0 text-center mb-12 z-10;
+  @apply w-full text-center mb-12 ;
 }
 
 .cover__title {
-  @apply text-4xl mt-6;
+  @apply text-4xl;
 }
 
 .menu {
-  @apply fixed bg-inverse-color h-full text-center w-full hidden pt-4 invisible opacity-0;
+  @apply flex flex-col fixed bg-inverse-color h-full text-center w-full hidden py-4 invisible opacity-0;
 }
 
 .menu ul li {
@@ -70,8 +72,6 @@
   @apply mr-3
 }
 
-
-
 @variants hover {
   .menu__link {
     @apply text-blue-600;
@@ -86,7 +86,7 @@
 }
 
 .dark-mode-label {
-  @apply align-bottom inline-block cursor-pointer fill-current text-gray-600
+  @apply align-text-top inline-block cursor-pointer fill-current text-gray-600
 }
 
 #dark-mode,
@@ -116,17 +116,25 @@
 
 @screen lg {
   .menu {
-    @apply w-1/4 border-r border-gray-200 border-b-0 px-8 text-right block relative visible opacity-100;
+    @apply w-full flex flex-row justify-between relative visible opacity-100 text-left bg-menu-bg-color;
   }
+  .menu ul {
+    @apply flex flex-wrap px-8;
+  }
+
+  .menu ul li {
+    @apply pr-8 my-2;
+  }
+
   .content {
-    @apply w-3/5;
+    @apply w-3/4;
   }
 
   .cool-menu {
     @apply hidden;
   }
-}
 
-@media (prefers-color-scheme: dark) {
-
+  .dark-mode-label {
+    @apply pr-8 self-center
+  }
 }

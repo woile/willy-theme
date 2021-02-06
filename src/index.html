@@ -13,50 +13,19 @@
   <body>
     <input id="dark-mode" type="checkbox" />
     <div class="theme">
-      <div class="layout">
-        <div class="cover hack-sticky">
-          <h1 class="cover__title">Santi's blog</h1>
-          <h4>Software Engineer</h4>
-          <p>GITHUB TWEETER</p>
-
-          <label class="dark-mode-label hover:dark-mode-label" for="dark-mode">
-            <?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Generator: Gravit.io --><svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              style="isolation: isolate;"
-              viewBox="0 0 416 416"
-              width="30px"
-              height="30px"
-            >
-              <defs>
-                <clipPath id="_clipPath_qEPwrMg7OPn6mDBNPkG6Nqc7qffgU4IC">
-                  <rect width="416" height="416" />
-                </clipPath>
-              </defs>
-              <g clip-path="url(#_clipPath_qEPwrMg7OPn6mDBNPkG6Nqc7qffgU4IC)">
-                <path
-                  d=" M 304 88 C 304 57.38 299.49 26.39 288 0 C 364.43 33.27 416 111.32 416 200 C 416 319.29 319.29 416 200 416 C 111.32 416 33.27 364.43 0 288 C 26.39 299.49 57.38 304 88 304 C 207.29 304 304 207.29 304 88 Z "
-                />
-              </g>
-            </svg>
-          </label>
-          <ul class="inline-block">
-            <li><a href="es/" rel="alternate" hreflang="es">Español</a></li>
-          </ul>
-        </div>
-        <input id="cool-menu" class="hack-sticky" type="checkbox" />
-        <label for="cool-menu" class="cool-menu__label">
-          <svg
-            class="cool-menu hover:cool-menu checked:cool-menu"
-            viewBox="0 0 100 100"
-            width="40"
-            height="40"
-            aria-hidden="true"
-          >
-            <circle cx="50" cy="50" r="50" fill-opacity="0.5" />
-          </svg>
-        </label>
-        <nav class="menu">
+      <input id="cool-menu" class="hack-sticky" type="checkbox" />
+      <label for="cool-menu" class="cool-menu__label">
+        <svg
+          class="cool-menu hover:cool-menu checked:cool-menu"
+          viewBox="0 0 100 100"
+          width="40"
+          height="40"
+          aria-hidden="true"
+        >
+          <circle cx="50" cy="50" r="50" fill-opacity="0.5" />
+        </svg>
+      </label>
+      <nav class="menu">
           <ul>
             <li>
               <a href="#pipo" class="hover:menu__link">Home</a>
@@ -64,7 +33,31 @@
             <li><a href="/page.html" class="hover:menu__link">Tags</a></li>
             <li><a href="" class="hover:menu__link">Archive</a></li>
           </ul>
-        </nav>
+        <label class="dark-mode-label hover:dark-mode-label" for="dark-mode">
+          <?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Generator: Gravit.io --><svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            style="isolation: isolate"
+            viewBox="0 0 416 416"
+            width="30px"
+            height="30px"
+          >
+            <defs>
+              <clipPath id="_clipPath_qEPwrMg7OPn6mDBNPkG6Nqc7qffgU4IC">
+                <rect width="416" height="416" />
+              </clipPath>
+            </defs>
+            <g clip-path="url(#_clipPath_qEPwrMg7OPn6mDBNPkG6Nqc7qffgU4IC)">
+              <path
+                d=" M 304 88 C 304 57.38 299.49 26.39 288 0 C 364.43 33.27 416 111.32 416 200 C 416 319.29 319.29 416 200 416 C 111.32 416 33.27 364.43 0 288 C 26.39 299.49 57.38 304 88 304 C 207.29 304 304 207.29 304 88 Z "
+              />
+            </g>
+          </svg>
+        </label>
+      </nav>
+       <h1 class="cover__title">Santi's blog</h1>
+      <div class="layout">
+
         <div class="content">
           <article>
             <header>
@@ -77,24 +70,67 @@
 
             <div class="article__meta">
               <span class="byline author vcard">
-              <span class="byline-name fn" itemprop="author">
-                  Woile
+                <span class="byline-name fn" itemprop="author"> Woile </span>
               </span>
-              </span>
-                  | <a class="tag p-category article__meta__link hover:article__meta__link" href="#categories/argentinos/" rel="tag">#argentinos</a>
-                  | <a class="tag p-category article__meta__link hover:article__meta__link" href="#categories/dinero/" rel="tag">#dinero</a>
-                  | <a class="tag p-category article__meta__link hover:article__meta__link" href="#categories/fire/" rel="tag">#fire</a>
-                  | <a class="tag p-category article__meta__link hover:article__meta__link" href="#categories/holanda/" rel="tag">#holanda</a>
-                  | <a class="tag p-category article__meta__link hover:article__meta__link" href="#categories/inversion/" rel="tag">#inversion</a>
+              |
+              <a
+                class="tag p-category article__meta__link hover:article__meta__link"
+                href="#categories/argentinos/"
+                rel="tag"
+                >#argentinos</a
+              >
+              |
+              <a
+                class="tag p-category article__meta__link hover:article__meta__link"
+                href="#categories/dinero/"
+                rel="tag"
+                >#dinero</a
+              >
+              |
+              <a
+                class="tag p-category article__meta__link hover:article__meta__link"
+                href="#categories/fire/"
+                rel="tag"
+                >#fire</a
+              >
+              |
+              <a
+                class="tag p-category article__meta__link hover:article__meta__link"
+                href="#categories/holanda/"
+                rel="tag"
+                >#holanda</a
+              >
+              |
+              <a
+                class="tag p-category article__meta__link hover:article__meta__link"
+                href="#categories/inversion/"
+                rel="tag"
+                >#inversion</a
+              >
               <span class="dateline">
-              | <a class="article__meta__link hover:article__meta__link" href="#posts/fire-para-argentinos-en-los-paises-bajos/" rel="bookmark">
-              <time class="published dt-published" datetime="2020-08-03T16:08:26Z" itemprop="datePublished" title="2020-08-03 16:08">2020-08-03 16:08</time></a>
+                |
+                <a
+                  class="article__meta__link hover:article__meta__link"
+                  href="#posts/fire-para-argentinos-en-los-paises-bajos/"
+                  rel="bookmark"
+                >
+                  <time
+                    class="published dt-published"
+                    datetime="2020-08-03T16:08:26Z"
+                    itemprop="datePublished"
+                    title="2020-08-03 16:08"
+                    >2020-08-03 16:08</time
+                  ></a
+                >
               </span>
-                  <span class="commentline">            <a href="#posts/fire-para-argentinos-en-los-paises-bajos/#disqus_thread" data-disqus-identifier="cache/posts/fire-para-argentinos-en-los-paises-bajos.es.html">0 Comments</a>
-
-
-          </span>
-  </div>
+              <span class="commentline">
+                <a
+                  href="#posts/fire-para-argentinos-en-los-paises-bajos/#disqus_thread"
+                  data-disqus-identifier="cache/posts/fire-para-argentinos-en-los-paises-bajos.es.html"
+                  >0 Comments</a
+                >
+              </span>
+            </div>
           </article>
           <article>
             <header>

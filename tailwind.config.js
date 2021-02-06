@@ -1,8 +1,8 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  // purge: ["./src/**/*.html", "./src/**/*.css", "./src/**/*.js"],
-  purge: [],
+  purge: ["./src/**/*.html", "./src/**/*.css", "./src/**/*.js"],
+  // purge: [],
   theme: {
     extend: {
       inset: {
@@ -15,6 +15,7 @@ module.exports = {
         "primary-color": "var(--primary-color)",
         "default-color": "var(--default-color)",
         "inverse-color": "var(--inverse-color)",
+        "menu-bg-color": "var(--menu-background)",
       },
     },
   },
