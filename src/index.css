@@ -5,7 +5,7 @@ h1 {
 }
 
 h1:not(:first-child) {
-  @apply mt-12;
+  @apply pt-12;
 }
 
 h2 {
@@ -13,7 +13,7 @@ h2 {
 }
 
 h2:not(:first-child) {
-  @apply mt-10;
+  @apply pt-10;
 }
 
 h3 {
@@ -22,7 +22,7 @@ h3 {
 
 h4:not(:first-child),
 h3:not(:first-child) {
-  @apply mt-8;
+  @apply pt-8;
 }
 
 h4 {
@@ -30,11 +30,11 @@ h4 {
 }
 
 h5 {
-  @apply text-lg mt-8 font-semibold;
+  @apply text-lg pt-8 font-semibold;
 }
 
 h6 {
-  @apply text-base mt-8 font-semibold;
+  @apply text-base pt-8 font-semibold;
 }
 
 

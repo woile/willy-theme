@@ -2,7 +2,7 @@
   --primary-color: theme("colors.teal.500");
   /* --secondary-color: theme("colors.white"); */
   --default-color: theme("colors.black");
-  --inverse-color: theme("colors.white");
+  --inverse-color: theme("colors.gray.100");
   --menu-background: theme("colors.orange.300");
 }
 
