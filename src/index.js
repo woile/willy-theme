@@ -2,6 +2,10 @@ console.log(`
 Holis!
 Welcome to my personal site!
 
+Contact me:
+
+https://twitter.com/santiwilly
+
 `);
 
 function load() {
@@ -16,7 +20,6 @@ function save(value) {
 
 function start() {
   let checkbox = document.getElementById("dark-mode");
-  console.log(checkbox);
   checkbox.onclick = () => {
     save(checkbox.checked)
   }
