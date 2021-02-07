@@ -3,7 +3,7 @@
   /* --secondary-color: theme("colors.white"); */
   --default-color: theme("colors.black");
   --inverse-color: theme("colors.white");
-  --menu-background: theme("colors.purple.100");
+  --menu-background: theme("colors.orange.300");
 }
 
 #dark-mode:checked ~ .theme {
@@ -24,7 +24,7 @@
 }
 
 .layout {
-  @apply justify-center leading-normal flex flex-wrap w-full max-w-screen-xl mx-auto font-sans text-lg antialiased min-h-screen;
+  @apply justify-center leading-normal flex flex-wrap w-full max-w-screen-xl mx-auto font-sans text-lg   antialiased min-h-screen;
 }
 
 .cover {
