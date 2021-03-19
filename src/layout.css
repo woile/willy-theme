@@ -36,12 +36,16 @@
 }
 
 .menu {
-  @apply flex flex-col fixed bg-inverse-color h-full text-center w-full hidden py-4 invisible opacity-0;
+  @apply flex flex-col fixed bg-inverse-color h-full text-center w-full hidden py-5 invisible opacity-0 gap-y-6;
 }
 
-.menu ul li {
-  @apply mb-4;
+.menu ul {
+  @apply grid grid-cols-1 gap-y-6;
 }
+
+/* .menu ul li {
+  @apply mb-4;
+} */
 
 .menu ul li.active {
   @apply text-teal-500;
@@ -116,14 +120,14 @@
 
 @screen lg {
   .menu {
-    @apply w-full flex flex-row justify-between relative visible opacity-100 text-left bg-menu-bg-color;
+    @apply w-full flex flex-row justify-between relative visible opacity-100 text-left bg-menu-bg-color gap-y-0;
   }
   .menu ul {
-    @apply flex flex-wrap px-8;
+    @apply flex flex-wrap px-8 content-center;
   }
 
   .menu ul li {
-    @apply pr-8 my-2;
+    @apply pr-8 flex self-center;
   }
 
   .content {
