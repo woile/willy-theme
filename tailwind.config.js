@@ -16,6 +16,7 @@ module.exports = {
         "default-color": "var(--default-color)",
         "inverse-color": "var(--inverse-color)",
         "menu-bg-color": "var(--menu-background)",
+        "translation-bg-color": "var(--translation-background)",
       },
     },
   },
