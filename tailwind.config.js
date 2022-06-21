@@ -13,6 +13,7 @@ module.exports = {
       },
       colors: {
         "primary-color": "var(--primary-color)",
+        "contrast-color": "var(--contrast-color)",
         "default-color": "var(--default-color)",
         "inverse-color": "var(--inverse-color)",
         "menu-bg-color": "var(--menu-background)",
