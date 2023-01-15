@@ -16,6 +16,8 @@ const LIGHT_THEME = "light";
 const DARK_THEME = "dark";
 const CHECKBOX_ID = "dark-mode";
 const isThemeSet = () => (localStorage.getItem(THEME_VAR) ? true : false);
+const isDarkTheme = () =>
+  localStorage.getItem(THEME_VAR) === DARK_THEME ? true : false;
 
 function getPreferredColorScheme() {
   if (window.matchMedia) {
@@ -29,13 +31,15 @@ function getPreferredColorScheme() {
 }
 
 function load() {
+  const checkbox = document.getElementById(CHECKBOX_ID);
+  // If the theme has been stored in localstorage
   if (isThemeSet()) {
-    let checked = JSON.parse();
-    document.getElementById(CHECKBOX_ID).checked = checked;
+    checkbox.checked = isDarkTheme();
     return;
   }
+  // Otherwise, we read from preference
   const getDefault = getPreferredColorScheme();
-  document.getElementById(CHECKBOX_ID).checked = getDefault == DARK_THEME;
+  checkbox.checked = getDefault == DARK_THEME;
 }
 
 function save(value) {
@@ -46,7 +50,8 @@ function start() {
   // Add save listener when user clicks checkbox
   let checkbox = document.getElementById(CHECKBOX_ID);
   checkbox.onclick = () => {
-    save(checkbox.checked);
+    const colorScheme = checkbox.checked == true ? DARK_THEME : LIGHT_THEME;
+    save(colorScheme);
   };
 
   // Add listener to system theme preference, as long as theme is not saved
