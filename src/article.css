@@ -86,7 +86,7 @@ article hr {
 }
 
 article blockquote {
-  @apply mt-4 bg-gray-300 px-5 pt-px pb-3 border-l-8 border-gray-600 text-gray-800;
+  @apply mt-4 bg-gray-300 px-5 pt-1 pb-3 border-l-8 border-gray-600 text-gray-800;
 }
 
 article img {
