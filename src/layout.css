@@ -88,7 +88,7 @@
   @apply flex inline-flex gap-x-4 text-base;
 }
 
-@variants hover {
+@layer utilities {
   .menu__link {
     @apply text-blue-600;
   }

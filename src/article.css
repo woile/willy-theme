@@ -20,7 +20,7 @@ section {
 
 pre.literal-block, pre.doctest-block, pre.math, pre.code,
 section pre {
-  @apply overflow-x-auto mb-8 border rounded p-3 mx-0;
+  @apply overflow-x-auto mb-8 mx-0;
 }
 
 section p {
@@ -33,7 +33,7 @@ section pre {
 }
 
 section code {
-  @apply p-1 bg-gray-600 text-gray-200 rounded mb-px;
+  @apply px-1 py-0.5 bg-gray-600 text-gray-200 rounded mb-px text-sm;
 }
 
 section a {
@@ -49,7 +49,7 @@ section a:hover {
 }
 
 
-@variants hover {
+@layer utilities {
   article .header__title__link {
     @apply bg-teal-400 p-1 text-black;
   }
@@ -112,3 +112,6 @@ article table td {
   @apply border-b border-gray-400 py-3 px-4 text-left;
 }
 
+.thread__container {
+  @apply text-default-color;
+}

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "parcel serve --host 0.0.0.0 ./src/**/*.html",
+    "start": "parcel serve --host 0.0.0.0 ./src/index.html",
     "build": "yarn build-css && yarn build-js",
     "build-css": "parcel build ./src/index.css --public-url ./ --dist-dir assets/css",
     "build-js": "parcel build ./src/index.js --public-url ./ --dist-dir assets/js",
@@ -13,9 +13,13 @@
   "license": "AGPL-3.0",
   "private": false,
   "dependencies": {
-    "tailwindcss": "1.9.6"
+    "tailwindcss": "3.2.4"
   },
   "devDependencies": {
-    "parcel": "^2.0.0-beta.1"
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "parcel": "^2.8.2",
+    "postcss": "^8.4.21",
+    "postcss-import": "^15.1.0"
   }
 }

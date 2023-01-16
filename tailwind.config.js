@@ -1,7 +1,10 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  purge: ["./src/**/*.html", "./src/**/*.css", "./src/**/*.js"],
+  // purge: ["./src/**/*.html", "./src/**/*.css", "./src/**/*.js"],
+  content: [
+    "./src/**/*.{css,html,js,ts,jsx,tsx}",
+  ],
   // purge: [],
   theme: {
     extend: {
@@ -21,9 +24,9 @@ module.exports = {
       },
     },
   },
-  variants: {
-    fill: ["responsive", "hover", "focus"],
-  },
+  // variants: {
+  //   fill: ["responsive", "hover", "focus"],
+  // },
   plugins: [
     plugin(function ({ addVariant, e }) {
       addVariant("checked", ({ modifySelectors, separator }) => {

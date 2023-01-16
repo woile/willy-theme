@@ -1,0 +1,36 @@
+h1 {
+  @apply text-5xl font-semibold;
+}
+
+h1:not(:first-child) {
+  @apply pt-12;
+}
+
+h2 {
+  @apply text-3xl font-semibold;
+}
+
+h2:not(:first-child) {
+  @apply pt-10;
+}
+
+h3 {
+  @apply text-2xl font-semibold;
+}
+
+h4:not(:first-child),
+h3:not(:first-child) {
+  @apply pt-8;
+}
+
+h4 {
+  @apply text-xl font-semibold;
+}
+
+h5 {
+  @apply text-lg pt-8 font-semibold;
+}
+
+h6 {
+  @apply text-base pt-8 font-semibold;
+}
