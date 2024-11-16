@@ -3,9 +3,12 @@
   /* --secondary-color: theme("colors.white"); */
   --default-color: theme("colors.black");
   --inverse-color: theme("colors.gray.100");
-  --menu-background: theme("colors.orange.300");
+  --menu-background: theme("colors.amber.200");
+  --menu-link: theme("colors.blue.600");
   --translation-background: theme("colors.gray.400");
   --contrast-color: theme("colors.white");
+  --shadow: theme("colors.gray.500");
+  --drop-shadow: theme("colors.gray.500");
 }
 
 #dark-mode:checked ~ .theme {
@@ -13,9 +16,12 @@
   /* --secondary-color: theme("colors.white"); */
   --default-color: theme("colors.gray.300");
   --inverse-color: theme("colors.black");
-  --menu-background: theme("colors.purple.700");
+  --menu-background: theme("colors.indigo.900");
+  --menu-link: theme("colors.cyan.400");
   --translation-background: theme("colors.gray.800");
   --contrast-color: theme("colors.gray.900");
+  --shadow: theme("colors.gray.500");
+  --drop-shadow: theme("colors.gray.500");
 }
 
 
@@ -40,7 +46,7 @@
 }
 
 .menu {
-  @apply flex flex-col fixed bg-inverse-color h-full text-center w-full hidden py-5 invisible opacity-0 gap-y-6;
+  @apply flex flex-col fixed bg-inverse-color h-full text-center w-full hidden py-5 invisible opacity-0 gap-y-6 shadow shadow-shadow-color;
 }
 
 .menu ul {
@@ -90,7 +96,7 @@
 
 @layer utilities {
   .menu__link {
-    @apply text-blue-600;
+    @apply text-menu-link-color;
   }
 
   .pagination__link {
@@ -123,7 +129,7 @@
 }
 
 .cool-menu {
-  @apply fill-current text-default-color;
+  @apply fill-current text-default-color drop-shadow-lg shadow-drop-shadow-color;
 }
 
 .cool-menu__label {
@@ -143,7 +149,7 @@
   }
 
   .content {
-    @apply w-3/4;
+    @apply w-3/4 shadow-md shadow-shadow-color;
   }
 
   .cool-menu {

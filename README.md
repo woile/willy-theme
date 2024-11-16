@@ -3,6 +3,12 @@
 ## Usage
 
 ```sh
-yarn install
-yarn build
+npm install
+npm run build
+```
+
+## Development
+
+```sh
+npm run start
 ```
